@@ -4,3 +4,5 @@ version = "0.1.0"
 authors = ["leo"]
 [dependencies.nickel]
 version = "*"
+[dependencies]
+postgres = "0.10"
