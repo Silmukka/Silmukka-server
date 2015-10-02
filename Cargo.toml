@@ -1,0 +1,6 @@
+[package]
+name = "silmukka"
+version = "0.1.0"
+authors = ["leo"]
+[dependencies.nickel]
+version = "*"
