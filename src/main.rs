@@ -10,11 +10,11 @@ mod routing;
 fn main(){
             let mut server = Nickel::new();
             let conn = Connection::connect("postgres://postgres:goldmine@localhost/silmukka", &SslMode::None).unwrap();
-            let mut routers = routing::routers(); 
+            let routers = routing::routers(&conn); 
             for router in routers{
-                server.utilize(router)
+                server.utilize(router);
             }
-            server.listen("127.0.0.1:80");
+            server.listen("127.0.0.1:8080");
 }
 #[test]
 fn database(){
