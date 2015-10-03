@@ -2,7 +2,10 @@
 name = "silmukka"
 version = "0.1.0"
 authors = ["leo"]
-[dependencies.nickel]
-version = "*"
 [dependencies]
-postgres = "0.10"
+postgres_array="*"
+chrono = "0.2"
+nickel = "*"
+[dependencies.postgres]
+version = "*"
+features = ["chrono"]
