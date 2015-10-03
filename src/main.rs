@@ -9,12 +9,12 @@ mod backend;
 mod routing;
 fn main(){
             let mut server = Nickel::new();
-            let conn = Connection::connect("postgres://postgres@localhost/silmukka", &SslMode::None).unwrap();
+            let conn = Connection::connect("postgres://postgres:goldmine@localhost/silmukka", &SslMode::None).unwrap();
             let mut routers = routing::routers(); 
             for router in routers{
                 server.utilize(router)
             }
-            server.listen("127.0.0.1:6768");
+            server.listen("127.0.0.1:80");
 }
 #[test]
 fn database(){
