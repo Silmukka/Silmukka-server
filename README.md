@@ -1,4 +1,4 @@
-# Silmukka-app
+# Silmukka-server
 Partioappi hackhatonissa
 
 Kansiossa web löytyy valmiit templatet. suunnitelma/web löytyy suunnitelmat. Ajamiseen windowsilla tulee ohjeet. Koodattu linuxilla joten ongelmia
