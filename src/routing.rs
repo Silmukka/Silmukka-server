@@ -1,5 +1,19 @@
 use nickel;
-pub fn routers(reitit: Vec<nickel::router::router::Router>)->Vec<nickel::router::Router>
+use nickel::{Nickel, HttpRouter};
+use nickel::router::router::Router;
+fn home()->Router
 {
-    reitit
+        let mut router = Nickel::router();
+        router.get("/", middleware! {
+                "Silmukka"
+            });
+        return router;
+}
+
+pub fn routers()->Vec<Router>
+{
+    let mut routes: Vec<Router> = Vec::new();
+    routes.push(home());
+    return routes;
+
 }

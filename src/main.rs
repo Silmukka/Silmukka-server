@@ -10,12 +10,10 @@ mod routing;
 fn main(){
             let mut server = Nickel::new();
             let conn = Connection::connect("postgres://postgres@localhost/silmukka", &SslMode::None).unwrap();
-            let mut reititys_alustus: Vec<nickel::router::router::Router> = Vec::new();
-
-            for _ in 0..5{
-                reititys_alustus.push(Nickel::router());
-            } 
-            let mut routers = routing::routers(reititys_alustus); 
+            let mut routers = routing::routers(); 
+            for router in routers{
+                server.utilize(router)
+            }
             server.listen("127.0.0.1:6768");
 }
 #[test]
