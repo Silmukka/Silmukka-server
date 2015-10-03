@@ -17,3 +17,9 @@ Kun haluaa päivittää koodinsa kirjoita
 git pull
 ```
 Kun koodi ei suostu puskemaan, ota yhteyttä ylläpitäjään.
+
+##Koodauksen TODO
+* Käyttöliittymä
+* Serverin backend
+* Tietoturva ja testit
+* Dokumentaatio
