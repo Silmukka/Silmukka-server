@@ -6,16 +6,16 @@ extern crate chrono;
 use std::collections::HashMap;
 use postgres::{Connection, SslMode};
 mod backend;
-//mod routing;
+mod routing;
 fn main(){
             let mut server = Nickel::new();
             let conn = Connection::connect("postgres://postgres@localhost/silmukka", &SslMode::None).unwrap();
             let mut reititys_alustus: Vec<nickel::router::router::Router> = Vec::new();
 
             for _ in 0..5{
-                reititys_alustus.push(server.router()));
+                reititys_alustus.push(Nickel::router());
             } 
-  //          let mut routers = routing::routers(); 
+            let mut routers = routing::routers(reititys_alustus); 
             server.listen("127.0.0.1:6768");
 }
 #[test]
