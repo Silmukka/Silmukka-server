@@ -3,11 +3,19 @@ use nickel::{Nickel, HttpRouter};
 extern crate postgres;
 extern crate postgres_array;
 extern crate chrono;
+use std::collections::HashMap;
 use postgres::{Connection, SslMode};
 mod backend;
+//mod routing;
 fn main(){
             let mut server = Nickel::new();
-            server.get("**", middleware!("Silmukka-projekti, tarvitaan HTML"));
+            let conn = Connection::connect("postgres://postgres@localhost/silmukka", &SslMode::None).unwrap();
+            let mut reititys_alustus: Vec<nickel::router::router::Router> = Vec::new();
+
+            for _ in 0..5{
+                reititys_alustus.push(server.router()));
+            } 
+  //          let mut routers = routing::routers(); 
             server.listen("127.0.0.1:6768");
 }
 #[test]
