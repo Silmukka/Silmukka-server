@@ -1,0 +1,45 @@
+body {
+    background: #428A8A;
+}
+
+.login-laatikko {
+    /* box-sizing: border-box; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 230px;
+    height: 216px;
+    padding: 20px 36px;
+    border-radius: 8px;
+    box-shadow: 3px 4px 5px rgba(0,0,0,0.4);
+    background: #fff;
+    line-height: 22px;
+    font-size: 120%;
+}
+
+.login-laatikko h3 {
+    margin: 8px 0 15px 0;
+    letter-spacing: 0.02em;
+}
+
+.login-laatikko input {
+    margin: 2px auto 12px auto;
+    width: 97%;
+    line-height: 140%;
+    background-color: #fbfbfb;
+}
+
+.login-laatikko button {
+    margin: 12px 0 10px 0;
+    border-radius: 8px;
+    padding: 4px 10px;
+    width: 99%;
+    font-size: 15px;
+}
+
+.login-laatikko button:hover {
+    background-color: #fff;
+}

@@ -1,0 +1,160 @@
+body, * {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Lato, Helvetica, Arial, sans-serif;
+    background: #428A8A;
+}
+a, a:hover {
+    text-decoration: none;
+    color: #000;
+}
+#header {
+    z-index: 5;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    background: #FFFFFF;
+}
+.sivun-otsikko {
+    box-sizing: border-box;
+    display: block;
+    margin: auto auto auto 0;
+    padding: 0 15px;
+    float: left;
+    height: 80px;
+    line-height: 80px;
+    text-transform: capitalize;
+}
+.app-nimi {
+    box-sizing: border-box;
+    display: block;
+    margin: auto 0 auto auto;
+    padding: 0 15px;
+    text-align: right;
+    height: 80px;
+    line-height: 80px;
+    float: right;
+    height: 1em;
+    color: #428A8A;
+    text-transform: capitalize;
+}
+.container {
+    width: 100%;
+    height: 100%;
+    /* background: #F4F4F4; */
+    overflow: hidden;
+    z-index: 2;
+}
+.palstojen-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.sivun-sisalto {
+    background: #fff;
+    border-radius: 8px;
+    margin: 50px auto;
+}
+.palstat {
+    box-sizing: border-box;
+    float: left;
+    padding: 15px;
+}
+.palstat div {
+    margin: 5px 5px;
+}
+.vasen-palsta {
+    box-sizing: border-box;
+    width: 48%;
+    float: left;
+}
+.oikea-palsta {
+    box-sizing: border-box;
+    width: 48%;
+    float: left;
+}
+.palsta-30 {
+    width: 30%;
+    float: left;
+}
+.palsta-70 {
+    width: 70%;
+    float: left;
+    box-sizing: border-box;
+}
+#hakukentta {
+    margin: 2px auto 12px auto;
+    width: 45%;
+    line-height: 24px;
+    font-size: 16px;
+    padding: 0 4px;
+    background-color: #fbfbfb;
+    box-sizing: border-box;
+}
+#isoimmat-tapahtumat {
+    width: 80%;
+    margin: auto;
+}
+.leirilaatikko {
+    /* background-color: #fff; */
+    border-radius: 8px;
+    margin: 8px -12px !important;
+    padding: 12px;
+    margin-top: 22px;
+}
+.leiriotsikot {
+    font-size: 32px;
+    font-weight: 300;
+    font-style:  italic;
+    margin-top: 6px;
+}
+.leiriajankohta {
+    padding-left: 2em;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-weight: bold;
+}
+
+#kalenteri-sisalto {
+    min-height: 100px;
+    /* background-color: #fff; */
+    border-radius: 8px;
+    margin: 8px -12px;
+    padding: 12px;
+}
+.kalenteri-laatikko {
+    width: 46%;
+    float: left;
+    border-radius: 8px;
+    margin: 14px 2% !important;
+    /* padding: 12px; */
+    margin-top: 22px;
+}
+.kalenteri-otsikot {
+    font-size: 26px;
+    font-weight: 300;
+    font-style:  italic;
+    margin-top: 5px;
+}
+.otsakkeet {
+    text-transform: uppercase !important;
+    letter-spacing: 0.04em;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 18px;
+}
+#tapahtuma-otsikko {
+    font-size: 60px;
+    font-weight: 300;
+    font-style:  italic;
+    margin-top: -20px;
+}
+.listat {
+    margin-left: 3em;
+}
+.listat li {
+    margin-top:10px;
+}

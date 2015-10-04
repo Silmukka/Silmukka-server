@@ -1,11 +1,28 @@
-<html>
-	<body>
+{{> header }}
+        <title>Varustelista</title>
+        <div class="container">
+            <div class="login-laatikko">
+                <h3>Kirjautuminen</h3>
 		<form>
-			<input type="text" name="Username">
-			<input type="PASSWORD" name="password">
-			 <button type="submit" formenctype="application/x-www-form-urlencoded" formaction="/valid" formmethod="post">Kirjaudu
-			 </button>
-
+                Nimi: <br>
+                <input type="text" name="i"><br>
+                Salasana: <br>
+                <input type="password" name="i"><br>
+		<button type="submit" formenctype="application/x-www-form-urlencoded" formaction="/valid" formmethod="post">Kirjaudu sisään</button>
 		</form>
-	</body>
-</html>
+            </div>
+        </div>
+    </body>
+    </html><!--
+
+    <html>
+    	<body>
+			<form>
+						<input type="text" name="Username">
+									<input type="PASSWORD" name="password">
+												 <button type="submit" formenctype="application/x-www-form-urlencoded" formaction="/valid" formmethod="post">Kirjaudu
+												 			 </button>
+
+															 		</form>
+																		</body>
+																		</html>

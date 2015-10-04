@@ -1,0 +1,14 @@
+{{> header }}
+		Listassa * merkki tarkoittaa uutta objekttia.
+		<form>
+			nimi<br>
+			<input type="text" name="a" {{nimi}}><br>
+			kuvaus<br>
+			<input type="text" name="b" {{kuvaus}}><br>
+			lista<br>
+			<input type="text" name="c" {{lista}}><br>
+			<button type="submit" formenctype="application/x-www-form-urlencoded" formaction="/edit_event" formmethod="post">Muokkaa</button>			
+		</form>
+	</body>
+</html>
+

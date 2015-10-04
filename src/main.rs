@@ -1,6 +1,7 @@
 #[macro_use] extern crate nickel;
 use nickel::{Nickel, HttpRouter};
 extern crate postgres;
+extern crate rand;
 extern crate postgres_array;
 extern crate chrono;
 use std::collections::HashMap;
@@ -24,15 +25,15 @@ fn database(){
 }
 #[test]
 fn admin(){
-        let conn = Connection::connect("postgres://postgres@localhost/testi", &SslMode::None)
+        let conn = Connection::connect("postgres://postgres@localhost/silmukka", &SslMode::None)
                         .unwrap();
         println!("yhteys luotu");
-        let admin = backend::luo_kayttaja("Leo Lahti".to_string(), &conn);
-        println!("{}", admin);
+ //       let admin = backend::luo_kayttaja("Leo Lahti".to_string(), &conn);
+  //      println!("{}", admin);
 }
 #[test]
 fn tapahtuma(){
-        let conn = Connection::connect("postgres://postgres@localhost/testi", &SslMode::None).unwrap();
-        let tapahtuma = backend::luo_tapahtuma("redu".to_string(), 1, &conn);
-        println!("{}", tapahtuma);
+        let conn = Connection::connect("postgres://postgres@localhost/silmukka", &SslMode::None).unwrap();
+        let _ = backend::luo_kayttaja("Leo Lahti".to_string(), "Leo".to_string(), "TearsInTheRain".to_string(), &conn);
+        
 }

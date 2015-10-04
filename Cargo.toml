@@ -6,6 +6,7 @@ authors = ["leo"]
 postgres_array="*"
 chrono = "0.2"
 nickel = "*"
+rand = "0.3"
 [dependencies.postgres]
 version = "*"
 features = ["chrono"]
