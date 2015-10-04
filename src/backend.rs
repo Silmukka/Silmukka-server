@@ -77,6 +77,7 @@ pub fn muokkaa_tapahtuma(tapahtuma: Tapahtuma)
                             kuvaus = $4, lista = $5,  maara = $6 WHERE id = $7").unwrap();
     let paivitetty = stmt.execute(&[&tapahtuma.nimi,  &Array::from_vec(tapahtuma.osallistujat, 1), &Array::from_vec(tapahtuma.adminit, 1),
                     &tapahtuma.kuvaus,  &Array::from_vec(tapahtuma.lista, 1), &luku, &tapahtuma.id]).unwrap();
+    let ss = conn.execute("DELETE FROM tapahtuma WHERE maara = 1", &[]).unwrap();
 }
 pub fn luo_kayttaja(nimi: String, us: String, sala: String, conn: &Connection)->i32
 {

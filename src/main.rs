@@ -15,7 +15,7 @@ fn main(){
             for router in routers{
                 server.utilize(router);
             }
-            server.listen("127.0.0.1:8080");
+            server.listen("127.0.0.1:6767");
 }
 #[test]
 fn database(){
