@@ -1,4 +1,4 @@
-# Silmukka-server
+# Silmukka-server HYLÄTTY Uusi on https://github.com/Silmukka/Silmukka
 Partioappi hackhatonissa
 
 Kansiossa web löytyy valmiit templatet. suunnitelma/web löytyy suunnitelmat. Ajamiseen windowsilla tulee ohjeet. Koodattu linuxilla joten ongelmia

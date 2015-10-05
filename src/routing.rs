@@ -87,7 +87,7 @@ fn valid(conn: &Connection)->Router
     return router;
 
 }
-fn tapahtuman_luonti_handle()->Vec<Router> 
+fn tapahtuman_luonti_handle()->Vec<Router> //luo tapahtumiin liittyvät routet.
 {
     let mut r1 = Nickel::router();
     let mut r3 = Nickel::router();
@@ -116,6 +116,7 @@ fn tapahtuman_luonti_handle()->Vec<Router>
         let mut list = String::new();
         let mut listaa = vec![name, kuvaus, list];
         let mut lista: Vec<String> = Vec::new();
+        println!("{}", form_data);
         for mut i in  listaa.clone(){
             
         for chara in form_data.clone().chars(){
@@ -128,10 +129,15 @@ fn tapahtuman_luonti_handle()->Vec<Router>
             }
             else{
                 i.push(chara);
+                print!("{}", chara);
             }
-            }
+            form_data.remove(0);
+        }
+            println!("");
+            
             lista.push(i);
         }
+        println!("{:?}", lista);
         let mut nimi  = lista.remove(0); 
         let mut kuvaus = lista.remove(0);
         let mut lista_ = vec![Some(lista.remove(0))];
